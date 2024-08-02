@@ -13,6 +13,12 @@
 // You don't have to though: it's perfectly okay to write three separate
 // implementations manually. Venture further only if you're curious.
 
+trait Power {
+    fn power(&self, n: u32) -> &u32 {
+        &self.power(n)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::Power;
